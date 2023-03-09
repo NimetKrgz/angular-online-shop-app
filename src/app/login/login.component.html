@@ -1,0 +1,23 @@
+<main class="form-signin w-100 m-auto text-center">
+    <form #loginForm = "ngForm" (ngSubmit) = "login(loginForm)" class=" form-signin">
+      <img class="mb-4" src="assets/flower-svgrepo-com.svg" alt="" width="72" height="57">
+      <h1 class="h3 mb-3 fw-normal">Please Login</h1>
+  
+      <div class="form-floating">
+        <input type="text" [(ngModel)] = "model.userName" name = "userName" #userName = "ngModel" class="form-control" id="userName" placeholder="Username" required autofocus>
+        <label for="floatingInput">Username</label>
+      </div>
+      <div class="form-floating">
+        <input type="password" [(ngModel)] = "model.password" name = "password" #password = "ngModel" class="form-control" id="password" placeholder="Password" required>
+        <label for="floatingPassword">Password</label>
+      </div>
+  
+      <div class="checkbox mb-3">
+        <label>
+          <input type="checkbox" value="remember-me"> Remember me
+        </label>
+      </div>
+      <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+      <p class="mt-5 mb-3 text-muted">&copy; 2017–2022</p>
+    </form>
+  </main>
